@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+   }
+   body{
+  background-color: black;
+  background-image: url("hawassa4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   }
+   nav{
+     position: fixed;
+       top: 0;
+       left: 0;
+       background: rgba(0, 0, 0, 0.2);
+       backdrop-filter: saturate(180%) blur(10px);
+       display: flex;
+       width: 100%;
+       justify-content: space-between;
+       align-items: center;
+       padding: 12px 5px;
+       z-index: 10;
+       color: whitesmoke;
+   }
+   nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left:8%;
+    padding-right: 8%;
+   }
+   #top{
+    color: black;
+    font-size: 40px;
+    letter-spacing: 1px;
+    cursor: pointer;
+   }
+   h1{
+     font-size: 60px;
+     font-family: cursive;
+   }
+   nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding:10px 25px ;
+   }
+   nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+   }
+   nav ul li a:hover{
+    color: #8f878a;
+    transition: .4s;
+   }
+   @media screen and(max-width:980px){
+     ul li a{
+       font-size: 20px;
+     }
+   }
+   .content{
+    position: absolute;
+    top: 30%;
+    left: 14%;
+    transform: translateY(-50%);
+   }
+   .content h1{
+    color: black;
+    margin: 20px 0px 20px;
+    font-size:60px;
+    text-align: center;
+   }
+   @media screen and(max-width:980px) {
+     .content h1{
+       font-size: 50px;
+     }
+   }
+   
+   
+   
+   span{
+     margin-right: 0px;
+    color: black;
+   }
+   #button {
+    display: inline-block;
+    background-color: #9e9b9c;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 21px;
+    right: 15px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 200;
+  }
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color: #375C7A;
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  @media (min-width: 500px) {
+    .content {
+      width: 43%;
+    }
+    #button {
+      margin: 30px;
+    }
+  }
+  .about{
+    top: 30%;
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url("Lake\ Hawassa.jfif");
+   }
+   .about img{
+    height: auto;
+    width: 430px;
+   }
+   .about-text{
+    width: 550px;
+    margin-top: 65%;
+    margin-left: 0%;
+    border-radius: 20px;
+   }
+   .about-text p{
+     top: 50%;
+     left: 30%;
+   }
+   .main{
+       top: 65%;
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+   }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    background-image: url("city4.jpg");
+    background-size: cover;
+  }
+  
+  .photo {
+    position: relative;
+    overflow: hidden;
+    border: 20px solid black;
+    padding: 0;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .photo:hover img {
+    transform: scale(1.1);
+  }
+  
+  .photo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .photo:hover::before {
+    opacity: 1;
+  }
+  
+  .photo::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .photo:hover::after {
+    opacity: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
